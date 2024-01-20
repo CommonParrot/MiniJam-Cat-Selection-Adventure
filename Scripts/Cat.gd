@@ -69,3 +69,7 @@ func set_eyes_color(stat_value: int = 0):
 			eye_node.texture = load("res://images/Red_Eyes.png")
 		eye_colors.GREEN:
 			eye_node.texture = load("res://images/Green_Eyes.png")
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://Screens/End.tscn")
