@@ -1,6 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://50p4hd4vmv76"]
+[gd_scene load_steps=7 format=3 uid="uid://c0l8xgc8ofhde"]
 
 [ext_resource type="Script" path="res://Scripts/CreditsScrollController.gd" id="1_wncqj"]
+[ext_resource type="Texture2D" uid="uid://b2rqy4u21y5d4" path="res://images/Concept_Art.png" id="2_8q6cu"]
+[ext_resource type="Texture2D" uid="uid://csa1tvse5mty6" path="res://images/Loading.png" id="2_sdt7b"]
+
+[sub_resource type="Animation" id="Animation_ajpmq"]
+resource_name = "Loading"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Loading:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(679, 373), Vector2(679, 383)]
+}
+
+[sub_resource type="Animation" id="Animation_2e08c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Loading:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(679, 373)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omxpw"]
+_data = {
+"Loading": SubResource("Animation_ajpmq"),
+"RESET": SubResource("Animation_2e08c")
+}
 
 [node name="End" type="Control"]
 layout_mode = 3
@@ -11,6 +51,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,11 +61,12 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 380.0
-offset_top = 33.0
-offset_right = 777.0
-offset_bottom = 907.0
+offset_left = 46.0
+offset_top = 737.0
+offset_right = 443.0
+offset_bottom = 1611.0
 scale = Vector2(1.5, 1.5)
 text = "Thank you for playing!
 
@@ -74,3 +116,19 @@ script = ExtResource("1_wncqj")
 creditsPath = NodePath("../RichTextLabel")
 containerPath = NodePath("../ColorRect")
 speed = 75.0
+
+[node name="ConceptArt" type="Sprite2D" parent="."]
+position = Vector2(666, 392)
+scale = Vector2(0.357368, 0.357368)
+texture = ExtResource("2_8q6cu")
+
+[node name="Loading" type="Sprite2D" parent="."]
+position = Vector2(679, 373)
+scale = Vector2(0.37075, 0.37075)
+texture = ExtResource("2_sdt7b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_omxpw")
+}
+autoplay = "Loading"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cujg2taxym4y6"]
 
-[ext_resource type="Texture2D" uid="uid://bimfyca1glhkp" path="res://images/cat-adventure.png" id="1_x0evj"]
+[ext_resource type="Texture2D" uid="uid://cy1m52dlfy8iu" path="res://images/Title.png" id="1_3tb81"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_87ewx"]
 
 [node name="TitleScreen" type="Control"]
@@ -22,9 +22,9 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("1_x0evj")
+texture = ExtResource("1_3tb81")
 expand_mode = 2
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
