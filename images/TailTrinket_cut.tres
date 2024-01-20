@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dea2uqbo2r8sc"]
+
+[ext_resource type="Texture2D" uid="uid://drh8hcqeqvwjy" path="res://images/TailTrinket.png" id="1_t38gi"]
+
+[resource]
+atlas = ExtResource("1_t38gi")
+region = Rect2(1421.19, 1174.25, 201.359, 217.188)
