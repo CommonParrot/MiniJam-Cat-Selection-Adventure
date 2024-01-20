@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://youox4cuc70m"]
+[gd_scene load_steps=12 format=3 uid="uid://youox4cuc70m"]
 
 [ext_resource type="Script" path="res://Screens/DynamicCatOptionButton.gd" id="1_begdr"]
-[ext_resource type="Texture2D" uid="uid://dkxkg1in1cdqo" path="res://images/White_Cat.png" id="1_rqi7e"]
-[ext_resource type="Texture2D" path="res://images/TailTrinket_cut.tres" id="2_7kade"]
+[ext_resource type="Texture2D" uid="uid://5v5eg7cjj6np" path="res://images/White_Cat.png" id="1_rqi7e"]
+[ext_resource type="Texture2D" uid="uid://dea2uqbo2r8sc" path="res://images/TailTrinket_cut.tres" id="2_7kade"]
 [ext_resource type="Texture2D" uid="uid://cl0nnalqxhy2y" path="res://images/Crown.png" id="3_jjteo"]
 [ext_resource type="Texture2D" uid="uid://dblmkwcdpwt78" path="res://images/Crown_cut.tres" id="3_xhilw"]
 [ext_resource type="Texture2D" uid="uid://cpoxmt63ikby4" path="res://images/Earrings_cut.tres" id="4_qwp5y"]
 [ext_resource type="Texture2D" uid="uid://dj8a234n4odeu" path="res://images/Earrings.png" id="4_t31fm"]
 [ext_resource type="Texture2D" uid="uid://c30jskuoje3us" path="res://images/Glasses.png" id="5_ejovx"]
 [ext_resource type="Texture2D" uid="uid://bkvumkjje3rtb" path="res://images/Glasses_cut.tres" id="5_o2yrr"]
+[ext_resource type="Script" path="res://Scripts/AccessoriesController.gd" id="6_5lmvo"]
 [ext_resource type="Texture2D" uid="uid://drh8hcqeqvwjy" path="res://images/TailTrinket.png" id="6_bm52k"]
 
 [node name="Character creation" type="MarginContainer"]
@@ -254,26 +255,31 @@ text = "Accept"
 
 [node name="Container" type="PanelContainer" parent="VBoxContainer/HBoxContainer/right"]
 layout_mode = 2
+script = ExtResource("6_5lmvo")
 
 [node name="TailTrinket" type="TextureRect" parent="VBoxContainer/HBoxContainer/right/Container"]
+visible = false
 z_index = 1
 layout_mode = 2
 texture = ExtResource("6_bm52k")
 expand_mode = 4
 
 [node name="Crown" type="TextureRect" parent="VBoxContainer/HBoxContainer/right/Container"]
+visible = false
 z_index = 1
 layout_mode = 2
 texture = ExtResource("3_jjteo")
 expand_mode = 4
 
 [node name="Earrings" type="TextureRect" parent="VBoxContainer/HBoxContainer/right/Container"]
+visible = false
 z_index = 1
 layout_mode = 2
 texture = ExtResource("4_t31fm")
 expand_mode = 4
 
 [node name="Glasses" type="TextureRect" parent="VBoxContainer/HBoxContainer/right/Container"]
+visible = false
 z_index = 1
 layout_mode = 2
 texture = ExtResource("5_ejovx")
@@ -286,3 +292,8 @@ expand_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/left/Accessories/Earrings" to="VBoxContainer/HBoxContainer/right/Container" method="_on_earrings_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/left/Accessories/Glasses" to="VBoxContainer/HBoxContainer/right/Container" method="_on_glasses_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/left/Accessories/TailTrinket" to="VBoxContainer/HBoxContainer/right/Container" method="_on_tail_trinket_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/left/Accessories/Crown" to="VBoxContainer/HBoxContainer/right/Container" method="_on_crown_pressed"]
