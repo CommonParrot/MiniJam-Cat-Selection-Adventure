@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://youox4cuc70m"]
+[gd_scene load_steps=3 format=3 uid="uid://youox4cuc70m"]
 
-[node name="CharacterSelectionScreen" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://dpprlvlqvbstu" path="res://Screens/Statlist.tscn" id="1_hfvfn"]
+[ext_resource type="PackedScene" uid="uid://c874qj1urrdtj" path="res://Screens/Cat.tscn" id="2_e2hk4"]
 
-[node name="Control" type="Control" parent="."]
+[node name="characte_creation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +13,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,10 +21,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+[node name="Character Select Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Create Your Character"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="left" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Class" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+[node name="label_Class" type="Label" parent="VBoxContainer/HBoxContainer/left/Class"]
 layout_mode = 2
-disabled = true
+size_flags_vertical = 6
+text = "Choices 1"
+horizontal_alignment = 1
+
+[node name="statlist_Class" parent="VBoxContainer/HBoxContainer/left/Class" instance=ExtResource("1_hfvfn")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Choices 2"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Items"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Cat" parent="VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_e2hk4")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 text = "Accept"
