@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cpoxmt63ikby4"]
+
+[ext_resource type="Texture2D" uid="uid://dj8a234n4odeu" path="res://images/Earrings.png" id="1_2hcxo"]
+
+[resource]
+atlas = ExtResource("1_2hcxo")
+region = Rect2(334.08, 177.188, 280, 452)

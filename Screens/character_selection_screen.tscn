@@ -4,21 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dkxkg1in1cdqo" path="res://images/White_Cat.png" id="1_rqi7e"]
 [ext_resource type="Texture2D" path="res://images/TailTrinket_cut.tres" id="2_7kade"]
 [ext_resource type="Texture2D" uid="uid://cl0nnalqxhy2y" path="res://images/Crown.png" id="3_jjteo"]
+[ext_resource type="Texture2D" uid="uid://dblmkwcdpwt78" path="res://images/Crown_cut.tres" id="3_xhilw"]
+[ext_resource type="Texture2D" uid="uid://cpoxmt63ikby4" path="res://images/Earrings_cut.tres" id="4_qwp5y"]
 [ext_resource type="Texture2D" uid="uid://dj8a234n4odeu" path="res://images/Earrings.png" id="4_t31fm"]
 [ext_resource type="Texture2D" uid="uid://c30jskuoje3us" path="res://images/Glasses.png" id="5_ejovx"]
+[ext_resource type="Texture2D" uid="uid://bkvumkjje3rtb" path="res://images/Glasses_cut.tres" id="5_o2yrr"]
 [ext_resource type="Texture2D" uid="uid://drh8hcqeqvwjy" path="res://images/TailTrinket.png" id="6_bm52k"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lcnkw"]
-atlas = ExtResource("3_jjteo")
-region = Rect2(703.84, 34.838, 471, 379)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p41do"]
-atlas = ExtResource("4_t31fm")
-region = Rect2(334.08, 177.188, 280, 452)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4frg6"]
-atlas = ExtResource("5_ejovx")
-region = Rect2(587.88, 495.604, 703, 340)
 
 [node name="Character creation" type="MarginContainer"]
 anchors_preset = 15
@@ -221,33 +212,34 @@ text = "Items"
 
 [node name="Accessories" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
+size_flags_vertical = 8
 
-[node name="TailTrinket" type="TextureRect" parent="VBoxContainer/HBoxContainer/left/Accessories"]
+[node name="Earrings" type="TextureButton" parent="VBoxContainer/HBoxContainer/left/Accessories"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("2_7kade")
-expand_mode = 4
+texture_normal = ExtResource("4_qwp5y")
+ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Crown" type="TextureRect" parent="VBoxContainer/HBoxContainer/left/Accessories"]
+[node name="Glasses" type="TextureButton" parent="VBoxContainer/HBoxContainer/left/Accessories"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = SubResource("AtlasTexture_lcnkw")
-expand_mode = 4
+texture_normal = ExtResource("5_o2yrr")
+ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Earrings" type="TextureRect" parent="VBoxContainer/HBoxContainer/left/Accessories"]
+[node name="TailTrinket" type="TextureButton" parent="VBoxContainer/HBoxContainer/left/Accessories"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = SubResource("AtlasTexture_p41do")
-expand_mode = 4
+texture_normal = ExtResource("2_7kade")
+ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Glasses" type="TextureRect" parent="VBoxContainer/HBoxContainer/left/Accessories"]
+[node name="Crown" type="TextureButton" parent="VBoxContainer/HBoxContainer/left/Accessories"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = SubResource("AtlasTexture_4frg6")
-expand_mode = 4
+texture_normal = ExtResource("3_xhilw")
+ignore_texture_size = true
 stretch_mode = 5
 
 [node name="right" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
