@@ -46,7 +46,7 @@ func change_cat_stat(stat_name: String, stat_value: int) -> void:
 			set_eyes_color(stat_value)
 	if !possible:
 		return
-	Signals.ui_stat_change.emit(stat_name, stat_value)
+	Signals.update_ui_stat.emit(stat_name, stat_value)
 
 func set_cat_color(stat_value: int = 0):
 	match stat_value:
