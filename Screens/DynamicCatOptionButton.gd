@@ -11,9 +11,7 @@ func _ready():
 func _on_item_selected(index):
 	Signals.ui_stat_change.emit(stat_name, selected)
 
-func selection_accepted(name: string, value: int):
+func selection_accepted(stat_name: String, value: int):
 	if(stat_name == name):
 		selected = value
-	else:
-		
-
+	return

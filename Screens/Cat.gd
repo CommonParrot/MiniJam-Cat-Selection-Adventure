@@ -31,7 +31,7 @@ func change_cat_stat(stat_name: String, stat_value: int) -> void:
 				points += stat_value - agility
 				possible = true
 		"color":
-			
+			set_cat_color(stat_value)
 			
 		"eyes_color":
 			
