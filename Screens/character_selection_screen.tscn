@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://youox4cuc70m"]
 
-[ext_resource type="Script" path="res://Screens/OptionName.gd" id="1_d0j74"]
+[ext_resource type="Script" path="res://Screens/DynamicCatOptionButton.gd" id="1_begdr"]
 [ext_resource type="Texture2D" uid="uid://5v5eg7cjj6np" path="res://images/White_Cat.png" id="1_rqi7e"]
 
 [node name="Character creation" type="MarginContainer"]
@@ -45,7 +45,7 @@ size_flags_vertical = 6
 text = "Class"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Class"]
+[node name="DynamicCatOptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Class"]
 layout_mode = 2
 item_count = 3
 popup/item_0/text = "Warrior"
@@ -54,6 +54,7 @@ popup/item_1/text = "Knight"
 popup/item_1/id = 1
 popup/item_2/text = "Wanderer"
 popup/item_2/id = 2
+script = ExtResource("1_begdr")
 
 [node name="Color" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
@@ -64,7 +65,7 @@ size_flags_vertical = 6
 text = "Color"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Color"]
+[node name="DynamicCatOptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Color"]
 layout_mode = 2
 item_count = 3
 popup/item_0/text = "White"
@@ -73,6 +74,7 @@ popup/item_1/text = "Black"
 popup/item_1/id = 1
 popup/item_2/text = "Brown"
 popup/item_2/id = 2
+script = ExtResource("1_begdr")
 
 [node name="Stats" type="Label" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
@@ -89,16 +91,9 @@ size_flags_vertical = 6
 text = "Health"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Health"]
+[node name="DynamicCatOptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Health"]
 layout_mode = 2
-item_count = 3
-popup/item_0/text = "2"
-popup/item_0/id = 0
-popup/item_1/text = "5"
-popup/item_1/id = 1
-popup/item_2/text = "7"
-popup/item_2/id = 2
-script = ExtResource("1_d0j74")
+script = ExtResource("1_begdr")
 
 [node name="Agility" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
@@ -109,7 +104,7 @@ size_flags_vertical = 6
 text = "Agility"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Agility"]
+[node name="DynamicCatOptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Agility"]
 layout_mode = 2
 item_count = 3
 popup/item_0/text = "2"
@@ -118,6 +113,7 @@ popup/item_1/text = "5"
 popup/item_1/id = 1
 popup/item_2/text = "7"
 popup/item_2/id = 2
+script = ExtResource("1_begdr")
 
 [node name="Magic" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
@@ -128,7 +124,7 @@ size_flags_vertical = 6
 text = "Magic"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Magic"]
+[node name="DynamicCatOptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Magic"]
 layout_mode = 2
 item_count = 3
 popup/item_0/text = "2"
@@ -137,6 +133,7 @@ popup/item_1/text = "5"
 popup/item_1/id = 1
 popup/item_2/text = "7"
 popup/item_2/id = 2
+script = ExtResource("1_begdr")
 
 [node name="Items" type="Label" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
@@ -160,5 +157,3 @@ text = "Accept"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-
-[connection signal="item_selected" from="VBoxContainer/HBoxContainer/left/Health/OptionButton" to="VBoxContainer/HBoxContainer/left/Health/OptionButton" method="_on_item_selected"]
