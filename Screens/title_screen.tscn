@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cujg2taxym4y6"]
+[gd_scene load_steps=3 format=3 uid="uid://cujg2taxym4y6"]
 
 [ext_resource type="Texture2D" uid="uid://bimfyca1glhkp" path="res://images/cat-adventure.png" id="1_x0evj"]
+[ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_87ewx"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -31,13 +32,19 @@ size_flags_horizontal = 4
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer2/VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="VBoxContainer2/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 text = "Quit
 "
+
+[node name="SceneController" type="Node2D" parent="."]
+script = ExtResource("2_87ewx")
+
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/StartButton" to="SceneController" method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/QuitButton" to="SceneController" method="_on_quit_button_pressed"]
