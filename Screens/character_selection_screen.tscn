@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://youox4cuc70m"]
 
 [ext_resource type="Script" path="res://Screens/DynamicCatOptionButton.gd" id="1_begdr"]
-[ext_resource type="Texture2D" uid="uid://5v5eg7cjj6np" path="res://images/White_Cat.png" id="1_rqi7e"]
-[ext_resource type="Texture2D" uid="uid://dea2uqbo2r8sc" path="res://images/TailTrinket_cut.tres" id="2_7kade"]
+[ext_resource type="Texture2D" uid="uid://dkxkg1in1cdqo" path="res://images/White_Cat.png" id="1_rqi7e"]
+[ext_resource type="Texture2D" path="res://images/TailTrinket_cut.tres" id="2_7kade"]
 [ext_resource type="Texture2D" uid="uid://cl0nnalqxhy2y" path="res://images/Crown.png" id="3_jjteo"]
 [ext_resource type="Texture2D" uid="uid://dj8a234n4odeu" path="res://images/Earrings.png" id="4_t31fm"]
 [ext_resource type="Texture2D" uid="uid://c30jskuoje3us" path="res://images/Glasses.png" id="5_ejovx"]
@@ -72,6 +72,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Wanderer"
 popup/item_2/id = 2
 script = ExtResource("1_begdr")
+stat_name = "class"
 
 [node name="Color" type="Label" parent="VBoxContainer/HBoxContainer/left/Apperance_table"]
 layout_mode = 2
@@ -88,6 +89,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Brown"
 popup/item_2/id = 2
 script = ExtResource("1_begdr")
+stat_name = "color"
 
 [node name="Eyes_Color" type="Label" parent="VBoxContainer/HBoxContainer/left/Apperance_table"]
 layout_mode = 2
@@ -104,12 +106,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Brown"
 popup/item_2/id = 2
 script = ExtResource("1_begdr")
-popup/item_0/text = "White"
-popup/item_0/id = 0
-popup/item_1/text = "Black"
-popup/item_1/id = 1
-popup/item_2/text = "Brown"
-popup/item_2/id = 2
+stat_name = "color_eyes"
 
 [node name="Stats" type="Label" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
@@ -151,53 +148,7 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 script = ExtResource("1_begdr")
-popup/item_0/text = "1"
-popup/item_0/id = 0
-popup/item_1/text = "2"
-popup/item_1/id = 1
-popup/item_2/text = "3"
-popup/item_2/id = 2
-popup/item_3/text = "4"
-popup/item_3/id = 3
-popup/item_4/text = "5"
-popup/item_4/id = 4
-popup/item_5/text = "6"
-popup/item_5/id = 5
-popup/item_6/text = "7"
-popup/item_6/id = 6
-popup/item_7/text = "8"
-popup/item_7/id = 7
-popup/item_8/text = "9"
-popup/item_8/id = 8
-popup/item_9/text = "10"
-popup/item_9/id = 9
-popup/item_0/icon = null
-popup/item_0/disabled = false
-popup/item_0/separator = false
-popup/item_1/icon = null
-popup/item_1/disabled = false
-popup/item_1/separator = false
-popup/item_2/icon = null
-popup/item_2/disabled = false
-popup/item_2/separator = false
-popup/item_3/icon = null
-popup/item_3/disabled = false
-popup/item_3/separator = false
-popup/item_4/icon = null
-popup/item_4/disabled = false
-popup/item_4/separator = false
-popup/item_5/icon = null
-popup/item_5/disabled = false
-popup/item_5/separator = false
-popup/item_6/icon = null
-popup/item_6/disabled = false
-popup/item_6/separator = false
-popup/item_7/icon = null
-popup/item_7/disabled = false
-popup/item_7/separator = false
-popup/item_8/icon = null
-popup/item_8/disabled = false
-popup/item_8/separator = false
+stat_name = "health"
 
 [node name="Agility" type="Label" parent="VBoxContainer/HBoxContainer/left/Stats_table"]
 layout_mode = 2
@@ -229,53 +180,7 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 script = ExtResource("1_begdr")
-popup/item_0/text = "1"
-popup/item_0/id = 0
-popup/item_1/text = "2"
-popup/item_1/id = 1
-popup/item_2/text = "3"
-popup/item_2/id = 2
-popup/item_3/text = "4"
-popup/item_3/id = 3
-popup/item_4/text = "5"
-popup/item_4/id = 4
-popup/item_5/text = "6"
-popup/item_5/id = 5
-popup/item_6/text = "7"
-popup/item_6/id = 6
-popup/item_7/text = "8"
-popup/item_7/id = 7
-popup/item_8/text = "9"
-popup/item_8/id = 8
-popup/item_9/text = "10"
-popup/item_9/id = 9
-popup/item_0/icon = null
-popup/item_0/disabled = false
-popup/item_0/separator = false
-popup/item_1/icon = null
-popup/item_1/disabled = false
-popup/item_1/separator = false
-popup/item_2/icon = null
-popup/item_2/disabled = false
-popup/item_2/separator = false
-popup/item_3/icon = null
-popup/item_3/disabled = false
-popup/item_3/separator = false
-popup/item_4/icon = null
-popup/item_4/disabled = false
-popup/item_4/separator = false
-popup/item_5/icon = null
-popup/item_5/disabled = false
-popup/item_5/separator = false
-popup/item_6/icon = null
-popup/item_6/disabled = false
-popup/item_6/separator = false
-popup/item_7/icon = null
-popup/item_7/disabled = false
-popup/item_7/separator = false
-popup/item_8/icon = null
-popup/item_8/disabled = false
-popup/item_8/separator = false
+stat_name = "agility"
 
 [node name="Magic" type="Label" parent="VBoxContainer/HBoxContainer/left/Stats_table"]
 layout_mode = 2
@@ -307,52 +212,7 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 script = ExtResource("1_begdr")
-popup/item_0/text = "1"
-popup/item_1/text = "2"
-popup/item_2/text = "3"
-popup/item_0/icon = null
-popup/item_0/id = 0
-popup/item_0/disabled = false
-popup/item_0/separator = false
-popup/item_1/icon = null
-popup/item_1/id = 1
-popup/item_1/disabled = false
-popup/item_1/separator = false
-popup/item_2/icon = null
-popup/item_2/id = 2
-popup/item_2/disabled = false
-popup/item_2/separator = false
-popup/item_3/text = "4"
-popup/item_3/icon = null
-popup/item_3/id = 3
-popup/item_3/disabled = false
-popup/item_3/separator = false
-popup/item_4/text = "5"
-popup/item_4/icon = null
-popup/item_4/id = 4
-popup/item_4/disabled = false
-popup/item_4/separator = false
-popup/item_5/text = "6"
-popup/item_5/icon = null
-popup/item_5/id = 5
-popup/item_5/disabled = false
-popup/item_5/separator = false
-popup/item_6/text = "7"
-popup/item_6/icon = null
-popup/item_6/id = 6
-popup/item_6/disabled = false
-popup/item_6/separator = false
-popup/item_7/text = "8"
-popup/item_7/icon = null
-popup/item_7/id = 7
-popup/item_7/disabled = false
-popup/item_7/separator = false
-popup/item_8/text = "9"
-popup/item_8/icon = null
-popup/item_8/id = 8
-popup/item_8/disabled = false
-popup/item_8/separator = false
-popup/item_9/text = "10"
+stat_name = "magic"
 
 [node name="Items" type="Label" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
