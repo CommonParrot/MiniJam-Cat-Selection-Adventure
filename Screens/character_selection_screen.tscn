@@ -1,30 +1,26 @@
 [gd_scene load_steps=3 format=3 uid="uid://youox4cuc70m"]
 
-[ext_resource type="PackedScene" uid="uid://dpprlvlqvbstu" path="res://Screens/Statlist.tscn" id="1_hfvfn"]
-[ext_resource type="PackedScene" uid="uid://c874qj1urrdtj" path="res://Screens/Cat.tscn" id="2_e2hk4"]
+[ext_resource type="Script" path="res://Screens/OptionName.gd" id="1_d0j74"]
+[ext_resource type="Texture2D" uid="uid://5v5eg7cjj6np" path="res://images/White_Cat.png" id="1_rqi7e"]
 
-[node name="characte_creation" type="Control"]
-layout_mode = 3
+[node name="Character creation" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+alignment = 1
 
 [node name="Character Select Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
 text = "Create Your Character"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -34,37 +30,135 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Apperance" type="Label" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Apperance
+"
+
 [node name="Class" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
 
 [node name="label_Class" type="Label" parent="VBoxContainer/HBoxContainer/left/Class"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Choices 1"
+text = "Class"
 horizontal_alignment = 1
 
-[node name="statlist_Class" parent="VBoxContainer/HBoxContainer/left/Class" instance=ExtResource("1_hfvfn")]
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Class"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Warrior"
+popup/item_0/id = 0
+popup/item_1/text = "Knight"
+popup/item_1/id = 1
+popup/item_2/text = "Wanderer"
+popup/item_2/id = 2
+
+[node name="Color" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/left"]
+[node name="label_Class" type="Label" parent="VBoxContainer/HBoxContainer/left/Color"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Choices 2"
+text = "Color"
+horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/left"]
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Color"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "White"
+popup/item_0/id = 0
+popup/item_1/text = "Black"
+popup/item_1/id = 1
+popup/item_2/text = "Brown"
+popup/item_2/id = 2
+
+[node name="Stats" type="Label" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Stats
+"
+
+[node name="Health" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+
+[node name="label_Class" type="Label" parent="VBoxContainer/HBoxContainer/left/Health"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Health"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Health"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "2"
+popup/item_0/id = 0
+popup/item_1/text = "5"
+popup/item_1/id = 1
+popup/item_2/text = "7"
+popup/item_2/id = 2
+script = ExtResource("1_d0j74")
+
+[node name="Agility" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+
+[node name="label_Class" type="Label" parent="VBoxContainer/HBoxContainer/left/Agility"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Agility"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Agility"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "2"
+popup/item_0/id = 0
+popup/item_1/text = "5"
+popup/item_1/id = 1
+popup/item_2/text = "7"
+popup/item_2/id = 2
+
+[node name="Magic" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/left"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/left/Magic"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Magic"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/left/Magic"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "2"
+popup/item_0/id = 0
+popup/item_1/text = "5"
+popup/item_1/id = 1
+popup/item_2/text = "7"
+popup/item_2/id = 2
+
+[node name="Items" type="Label" parent="VBoxContainer/HBoxContainer/left"]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Items"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="right" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="Cat" parent="VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_e2hk4")]
+[node name="Cat" type="TextureRect" parent="VBoxContainer/HBoxContainer/right"]
 layout_mode = 2
+texture = ExtResource("1_rqi7e")
+expand_mode = 4
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/right"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Accept"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/left/Health/OptionButton" to="VBoxContainer/HBoxContainer/left/Health/OptionButton" method="_on_item_selected"]
