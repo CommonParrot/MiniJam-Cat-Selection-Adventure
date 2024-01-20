@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cujg2taxym4y6"]
+[gd_scene load_steps=5 format=3 uid="uid://cujg2taxym4y6"]
 
 [ext_resource type="Texture2D" uid="uid://cy1m52dlfy8iu" path="res://images/Title.png" id="1_3tb81"]
+[ext_resource type="Theme" uid="uid://bw0mhj7o0bkbv" path="res://main.theme" id="1_eg054"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_87ewx"]
 [ext_resource type="AudioStream" uid="uid://bdq28ga37dm3v" path="res://Sounds/177614__aminut__02-cat-miauing.wav" id="3_63yn3"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_eg054")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
