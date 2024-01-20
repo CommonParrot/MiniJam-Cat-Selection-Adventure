@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="73.676125mm"
+   height="8.9152222mm"
+   viewBox="0 0 73.676125 8.9152222"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <rect
+       x="137.93674"
+       y="299.65567"
+       width="318.68143"
+       height="256.84772"
+       id="rect113" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-36.622052,-80.278303)">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text111"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect113);fill:#ffc612;fill-opacity:1;stroke:#000000;stroke-opacity:1"><tspan
+         x="137.9375"
+         y="335.04688"
+         id="tspan981"><tspan
+           style="font-weight:bold;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS, Bold'"
+           id="tspan979">Cat Adventure</tspan></tspan></text>
+  </g>
+</svg>
