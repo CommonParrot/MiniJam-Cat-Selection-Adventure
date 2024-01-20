@@ -1,6 +1,6 @@
 extends Node
 
-@export var points = 4
+@export var points = 10
 var health = 2
 var agility = 2
 var magic = 2
@@ -29,16 +29,16 @@ func change_cat_stat(stat_name: String, stat_value: int) -> void:
 	var possible = false
 	match stat_name:
 		"health": 
-			if (stat_value - health) < points:
-				points += stat_value - health
+			if stat_value + 1 + total_value() < points:
+				health = stat_value + 1
 				possible = true
 		"agility":
-			if (stat_value - agility) < points:
-				points += stat_value - agility
+			if stat_value + 1 + total_value() < points:
+				agility = stat_value + 1
 				possible = true
 		"magic":
-			if (stat_value - magic) < points:
-				points += stat_value - agility
+			if stat_value + 1 + total_value() < points:
+				magic = stat_value + 1
 				possible = true
 		"color":
 			set_cat_color(stat_value)
@@ -47,6 +47,9 @@ func change_cat_stat(stat_name: String, stat_value: int) -> void:
 	if !possible:
 		return
 	Signals.update_ui_stat.emit(stat_name, stat_value)
+
+func total_value() -> float:
+	return health + agility + magic
 
 func set_cat_color(stat_value: int = 0):
 	match stat_value:

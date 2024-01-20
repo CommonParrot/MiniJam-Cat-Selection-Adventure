@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ch8jhqlp1j14x"
+path="res://.godot/imported/177614__aminut__02-cat-miauing short.wav-ca2fa20b8d0d27a804259a97fd186e85.sample"
+
+[deps]
+
+source_file="res://Sounds/177614__aminut__02-cat-miauing short.wav"
+dest_files=["res://.godot/imported/177614__aminut__02-cat-miauing short.wav-ca2fa20b8d0d27a804259a97fd186e85.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=48000
+compress/mode=0
