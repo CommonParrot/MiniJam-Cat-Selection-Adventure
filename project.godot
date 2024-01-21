@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Character Selection"
-run/main_scene="res://Screens/title_screen.tscn"
+run/main_scene="res://Screens/TitleScreen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,9 +23,8 @@ Signals="*res://Scripts/Signals.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/resizable=false
+window/size/mode=3
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_height"
 
 [rendering]
 

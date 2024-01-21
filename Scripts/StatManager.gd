@@ -14,39 +14,35 @@ enum eye_colors {BLUE, PURPLE, GREEN, RED}
 
 var eye_node
 var body_node
-# 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	eye_node = get_node("%Eyes")
 	body_node = get_node("%Cat")
-	Signals.update_ui_stat.emit("color", 2)
-	Signals.update_ui_stat.emit("color_eyes", 0)
 	Signals.ui_stat_change.connect(change_cat_stat)
 
 
 func change_cat_stat(stat_name: String, stat_value: int) -> void:
-	var possible = false
 	match stat_name:
 		"health": 
-			if stat_value + 1 + total_value() < points:
+			if total_points() - health + stat_value + 1 <= points:
 				health = stat_value + 1
-				possible = true
+			Signals.update_ui_stat.emit(stat_name, health - 1)
 		"agility":
-			if stat_value + 1 + total_value() < points:
+			if total_points() - agility + stat_value + 1 <= points:
 				agility = stat_value + 1
-				possible = true
+			Signals.update_ui_stat.emit(stat_name, agility - 1)
 		"magic":
-			if stat_value + 1 + total_value() < points:
+			if total_points() - magic + stat_value <= points:
 				magic = stat_value + 1
-				possible = true
+			Signals.update_ui_stat.emit(stat_name, magic - 1)
 		"color":
 			set_cat_color(stat_value)
 		"color_eyes":
 			set_eyes_color(stat_value)
-	if !possible:
-		return
-	Signals.update_ui_stat.emit(stat_name, stat_value)
+
+func total_points() -> int:
+	return health + agility + magic
 
 func total_value() -> float:
 	return health + agility + magic
