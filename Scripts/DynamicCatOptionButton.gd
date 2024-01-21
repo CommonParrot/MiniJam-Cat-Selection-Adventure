@@ -16,7 +16,6 @@ func _ready():
 
 func _on_item_selected(index):
 	Signals.ui_stat_change.emit(stat_name, index)
-	sound.play()
 
 func selection_accepted(stat_name: String, value: int):
 	if(stat_name == self.stat_name):

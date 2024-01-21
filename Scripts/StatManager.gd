@@ -33,7 +33,7 @@ func change_cat_stat(stat_name: String, stat_value: int) -> void:
 				agility = stat_value + 1
 			Signals.update_ui_stat.emit(stat_name, agility - 1)
 		"magic":
-			if total_points() - magic + stat_value <= points:
+			if total_points() - magic + stat_value + 1 <= points:
 				magic = stat_value + 1
 			Signals.update_ui_stat.emit(stat_name, magic - 1)
 		"color":
